@@ -1,0 +1,211 @@
+@font-face {
+        font-family: 'Open Sans Condensed';
+        src: url('./fonts/OpenSansCondensed-Regular.ttf') format('truetype'),
+                url('./fonts/OpenSansCondensed-Bold.ttf') format('woff'),
+                url('./fonts/OpenSansCondensed-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'Open Sans Condensed';
+        src: url('./fonts/OpenSansCondensed-Bold.ttf') format('truetype'),
+                url('./fonts/OpenSansCondensed-Bold.woff') format('woff'),
+                url('./fonts/OpenSansCondensed-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+}
+
+img {
+        max-width: 100%;
+}
+
+body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+}
+
+.menu_filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        align-items: center;
+        justify-content: space-around;
+}
+
+.categories_link {
+        border: 1px solid;
+
+}
+
+
+.categories_menu {
+        position: relative;
+        display: inline-block;
+}
+
+.categories_menu a {
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px;
+        display: block;
+        color: #666;
+        background-color: #333;
+}
+
+.submenu {
+        position: absolute;
+        top: 100%;
+        left: 70%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 8px 16px rgba(19, 18, 18, 0.2);
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        padding: 5px;
+        list-style: none;
+        border-radius: 5px;
+}
+
+.submenu li {
+        padding-left: 0;
+}
+
+.categories_menu:hover .submenu {
+        display: block;
+        opacity: 1;
+}
+
+.categories_menu a:hover {
+        border-color: yellow;
+        color: yellow;
+}
+
+.link_text {
+        color: #fdfdfd;
+}
+
+.submenu a {
+        white-space: nowrap;
+        color: white;
+        background-color: transparent;
+}
+
+.submenu a:first-child {
+        text-align: left;
+}
+
+.submenu a:not(:first-child) {
+        padding: 5px;
+        padding-left: 40px;
+
+}
+
+.categories_menu:hover .submenu {
+        display: block;
+        opacity: 1;
+}
+
+.filter {
+        position: relative;
+        display: inline-block;
+}
+
+/* Стили для ссылки меню фильтра */
+.filter a {
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        display: block;
+        color: #666;
+        background-color: #333;
+}
+
+.filter a:hover {
+        border-color: yellow;
+        color: yellow;
+}
+
+/* Стили для выпадающего списка */
+.link-list {
+        flex-direction: column;
+        list-style: none;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 8px 16px rgba(19, 18, 18, 0.2);
+        border-radius: 5px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        display: none;
+        white-space: nowrap;
+}
+
+.filter:hover .link-list {
+        display: block;
+        opacity: 1;
+}
+
+/* Дополнительно: Стили для checkbox */
+.link-list input {
+        margin-right: 5px;
+}
+
+.filter_menu {
+        border: 1px solid;
+        padding: 15px;
+}
+
+@media (max-width: 768px) {
+        .cd-hero-slider {
+
+                /* background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+        width: 100vw;*/
+        }
+
+        .submenu {
+                left: 88%;
+        }
+
+
+
+        .col-md-2 {
+                display: none;
+        }
+
+        .col-md-10 {
+                text-align: center;
+                margin-bottom: 25px;
+        }
+
+        .link_menu {
+                display: flex;
+                justify-content: center;
+                padding-top: 5px;
+        }
+
+        .payments_list {
+                display: flex;
+        }
+
+        .link-list {
+                left: 14%;
+        }
+
+
+
+}
